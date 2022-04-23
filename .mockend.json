@@ -29,7 +29,6 @@
     },
   },
   "ClassMember": {
-    "className": { "string": {} },
     "user": {
       "belongsTo": "User"
     },
