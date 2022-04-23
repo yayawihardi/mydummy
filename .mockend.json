@@ -23,5 +23,5 @@
   "ClassMember": {
     "user": {"belongsTo": "User"},
     "class": {"belongsTo": "Class"}
-  },
+  }
 }
