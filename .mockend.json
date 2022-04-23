@@ -19,5 +19,5 @@
     "className": { "string": {} },
     "year": {"int": [2020,2021,2022]},
     "members": {"hasMany": "User"}
-  },
+  }
 }
