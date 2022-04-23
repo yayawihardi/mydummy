@@ -1,0 +1,40 @@
+{
+  "Group": {
+    "groupName": { "string": {} },
+    "users": {
+      "hasMany": "User"
+    }
+  },
+  "User": {
+    "userName": { "loremWords": { "minLength": 2, "maxLength": 3 } },
+    "dob": {"min": "2005-01-01T00:00:00Z", "max": "2015-12-31T23:59:59Z"},
+    "email": { "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}" },
+    "isActive": { "boolean": {} },
+    "avatar": {"regexp": "https://i\\.pravatar\\.cc/150?u=[0-9]{5}"},
+    "photo": {"regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/1080"},
+    "balance": { "int": { "min": 500000, "max": 10000000 } },
+    "code": {"int": [100,200,300]},
+    "group": {
+      "belongsTo": "Group"
+    },
+    "class": {
+      "hasMany": "ClassMember"
+    },
+  },
+  "Class": {
+    "className": { "string": {} },
+    "year": {"int": [2020,2021,2022]},
+    "members": {
+      "hasMany": "ClassMember"
+    },
+  },
+  "ClassMember": {
+    "className": { "string": {} },
+    "user": {
+      "belongsTo": "User"
+    },
+    "class": {
+      "belongsTo": "Class"
+    },
+  },
+}
