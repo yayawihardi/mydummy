@@ -13,15 +13,11 @@
     "balance": { "int": { "min": 500000, "max": 10000000 } },
     "code": {"int": [100,200,300]},
     "group": {"belongsTo": "Group"},
-    "class": {"hasMany": "ClassMember"}
+    "class": {"hasMany": "Class"}
   },
   "Class": {
     "className": { "string": {} },
     "year": {"int": [2020,2021,2022]},
-    "members": {"hasMany": "ClassMember"}
+    "members": {"hasMany": "User"}
   },
-  "ClassMember": {
-    "user": {"belongsTo": "User"},
-    "class": {"belongsTo": "Class"}
-  }
 }
