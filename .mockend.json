@@ -1,10 +1,10 @@
 {
   "Group": {
-    "groupName": { "string": {} },
+    "groupName": { "string": ["Admin","Operator","Teacher","Student","Headmaster"] },
     "users": {"hasMany": "User"}
   },
   "User": {
-    "userName": { "loremWords": { "minLength": 2, "maxLength": 3 } },
+    "userName": { "loremWords": ["Ahmad","Sundari","Sukoco","Ammar","Sanusi","Budi", "Prakoso","Cucu","Dadan","Emi","Fachrul" ] },
     "dob": {"dateTime": {"min": "2005-01-01T00:00:00Z", "max": "2015-12-31T23:59:59Z"}},
     "email": { "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}" },
     "isActive": { "boolean": {} },
@@ -16,7 +16,7 @@
     "class": {"hasMany": "Class"}
   },
   "Class": {
-    "className": { "string": {} },
+    "className": { "string": ["A1","A2","A3","B1","B2","B3","C1","C2","C3"] },
     "year": {"int": [2020,2021,2022]},
     "members": {"hasMany": "User"}
   }
