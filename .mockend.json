@@ -1,9 +1,7 @@
 {
   "Group": {
     "groupName": { "string": {} },
-    "users": {
-      "hasMany": "User"
-    }
+    "users": {"hasMany": "User"}
   },
   "User": {
     "userName": { "loremWords": { "minLength": 2, "maxLength": 3 } },
@@ -14,26 +12,16 @@
     "photo": {"regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/1080"},
     "balance": { "int": { "min": 500000, "max": 10000000 } },
     "code": {"int": [100,200,300]},
-    "group": {
-      "belongsTo": "Group"
-    },
-    "class": {
-      "hasMany": "ClassMember"
-    },
+    "group": {"belongsTo": "Group"},
+    "class": {"hasMany": "ClassMember"}
   },
   "Class": {
     "className": { "string": {} },
     "year": {"int": [2020,2021,2022]},
-    "members": {
-      "hasMany": "ClassMember"
-    },
+    "members": {"hasMany": "ClassMember"}
   },
   "ClassMember": {
-    "user": {
-      "belongsTo": "User"
-    },
-    "class": {
-      "belongsTo": "Class"
-    },
+    "user": {"belongsTo": "User"},
+    "class": {"belongsTo": "Class"}
   },
 }
