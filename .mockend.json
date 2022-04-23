@@ -4,7 +4,7 @@
     "users": {"hasMany": "User"}
   },
   "User": {
-    "userName": { "loremWords": ["Ahmad","Sundari","Sukoco","Ammar","Sanusi","Budi", "Prakoso","Cucu","Dadan","Emi","Fachrul" ] },
+    "userName": { "string": ["Ahmad","Sundari","Sukoco","Ammar","Sanusi","Budi", "Prakoso","Cucu","Dadan","Emi","Fachrul" ] },
     "dob": {"dateTime": {"min": "2005-01-01T00:00:00Z", "max": "2015-12-31T23:59:59Z"}},
     "email": { "regexp": "[a-z]{5,10}@[a-z]{5}\\.[a-z]{2,3}" },
     "isActive": { "boolean": {} },
